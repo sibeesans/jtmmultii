@@ -114,7 +114,7 @@ echo -e " ${YELLOW}❐ DATE & TIME ${NC}         : ${Cyan}$DATEVPS | $TIMEZONE${
 echo -e " ${YELLOW}❐ DOMAIN ${NC}              : ${Cyan}$domain${NC}"
 echo -e " ${YELLOW}❐ NS DOMAIN ${NC}           : ${Cyan}$NS${NC}"
 echo -e " ${YELLOW}❐ IP VPS ${NC}              : ${Cyan}$IPVPS${NC}"
-echo -e " ${YELLOW}❐ EXP SCRIPT ${NC}          : ${Cyan}$LIFE-TIME${NC}"
+echo -e " ${YELLOW}❐ EXP SCRIPT ${NC}          : ${Cyan}LIFE-TIME${NC}"
 echo -e "${BICyan}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC ${BICyan} │"
 echo -e "${BICyan}│  \033[0m ${BICyan} $ssh1       $vma           $vla          $trb              $ssa   $NC   ${BICyan} │"
