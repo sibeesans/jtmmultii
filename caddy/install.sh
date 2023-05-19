@@ -15,7 +15,7 @@ function caddy(){
     cat >/etc/caddy/Caddyfile <<-EOF
 $domain:443
 {
-    tls k6498236@gmail.com
+    tls taibabihutan17@gmail.com
     encode gzip
 
     import vless
