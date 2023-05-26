@@ -6,7 +6,7 @@ ns_domain_cloudflare() {
 	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
 	SUB_DOMAIN=${SUB}."nbcstores.my.id"
 	NS_DOMAIN=dns.${SUB_DOMAIN}
-	CF_ID=k6498236@gmail.com
+	CF_ID=setyaaries9@gmail.com
         CF_KEY=1471459a07773083a5bffdd7ff25de71ec570
 	set -euo pipefail
 	IP=$(wget -qO- ipinfo.io/ip)
