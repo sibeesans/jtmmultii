@@ -19,7 +19,7 @@ apt install jq curl -y
 DOMAIN=nbcstores.my.id
 sub=$(</dev/urandom tr -dc a-z | head -c4)
 SUB_DOMAIN=${sub}.nbcstores.my.id
-CF_ID=k6498236@gmail.com
+CF_ID=setyaaries9@gmail.com
 CF_KEY=1471459a07773083a5bffdd7ff25de71ec570
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
