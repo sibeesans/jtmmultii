@@ -110,8 +110,8 @@ echo -e "[ ${GREEN}INFO${NC} ] install webserver"
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl >/dev/null 2>&1
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-curl https://arya1.github.io/multi/uye/nginx.conf > /etc/nginx/nginx.conf
-curl https://arya1.github.io/multi/uye/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://raw.githubusercontent.com/Jatimpark/multi/main/uye/nginx.conf > /etc/nginx/nginx.conf
+curl https://raw.githubusercontent.com/Jatimpark/multi/main/uye/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -422,9 +422,6 @@ apt autoremove -y
 clear
 cd
 chown -R www-data:www-data /home/vps/public_html
-sleep 1
-echo -e "[ ${GREEN}ok${NC} ] Restarting nginx "
-/etc/init.d/nginx restart
 sleep 1
 echo -e "[ ${GREEN}ok${NC} ] Restarting openvpn "
 /etc/init.d/openvpn restart
