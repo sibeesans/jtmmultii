@@ -38,7 +38,7 @@ clear
 
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://jaka1m.github.io/project/mantap/rclone.conf" >/dev/null 2>&1
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/rclone.conf" >/dev/null 2>&1
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install

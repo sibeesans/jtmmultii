@@ -49,7 +49,7 @@ commonname=geovpn
 email=admin@geolstore.net
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://arya1.github.io/multi/uye/password" >/dev/null 2>&1
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/password" >/dev/null 2>&1
 chmod +x /etc/pam.d/common-password >/dev/null 2>&1
 
 # go to root
@@ -97,87 +97,6 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 sleep 1
 #update
 clear
-echo ""
-echo -e "[ ${BLUE}NOTES${NC} ] Processing All Install"
-sleep 1
-echo -e "[ ${GREEN}INFO${NC} ] update..."
-apt update -y >/dev/null 2>&1
-apt install p7zip-full -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] upgrade..."
-apt upgrade -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install toilet..."
-apt install toilet -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install dist-upgrade..."
-apt dist-upgrade -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] remove --purge ufw firewalld..."
-apt-get remove --purge ufw firewalld -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] remove --purge exim4..."
-apt-get remove --purge exim4 -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install  curl..."
-apt -y install wget curl >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install ruby..."
-apt install ruby -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install python..."
-apt install python -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install make..."
-apt install make -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install cmake..."
-apt install cmake -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install coreutils..."
-apt install coreutils -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install rsyslog..."
-apt install rsyslog -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install net-tools..."
-apt install net-tools -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install zip..."
-apt install zip -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install unzip..."
-apt install unzip -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install nano..."
-apt install nano -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install sed..."
-apt install sed -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install gnupg..."
-apt install gnupg -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install gnupg1..."
-apt install gnupg1 -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install bc..."
-apt install bc -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install jq..."
-apt install jq -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install apt-transport-https..."
-apt install apt-transport-https -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install build-essential..."
-apt install build-essential -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install dirmngr..."
-apt install dirmngr -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libxml-parser-perl..."
-apt install libxml-parser-perl -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install neofetch..."
-apt install neofetch -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install git..."
-apt install git -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install lsof..."
-apt install lsof -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libsqlite3-dev..."
-apt install libsqlite3-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libz-dev..."
-apt install libz-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install gcc..."
-apt install gcc -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install g++..."
-apt install g++ -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libreadline-dev..."
-apt install libreadline-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install zlib1g-dev..."
-apt install zlib1g-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libssl-dev..."
-apt install libssl-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install libssl1.0-dev..."
-apt install libssl1.0-dev -y >/dev/null 2>&1
-echo -e "[ ${GREEN}INFO${NC} ] install dos2unix..."
-apt install dos2unix -y >/dev/null 2>&1
-echo ""
 # set time GMT +7
 echo -e "[ ${BLUE}NOTES${NC} ] set time GMT +7"
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -208,7 +127,7 @@ cd
 # install badvpn
 echo -e "[ ${GREEN}INFO${NC} ] install badvpn-udpgw64"
 cd
-wget -O /usr/bin/badvpn-udpgw "https://arya1.github.io/multi/uye/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -247,7 +166,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 echo -e "[ ${GREEN}INFO${NC} ] install squid"
 cd
 apt -y install squid3 >/dev/null 2>&1
-wget -O /etc/squid/squid.conf "https://arya1.github.io/multi/uye/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -313,7 +232,7 @@ mkdir -p /etc/geovpn
 # install stunnel 5 
 echo -e "[ ${GREEN}INFO${NC} ] install stunnel 5 "
 cd /root/
-wget -q -O stunnel-5.62.zip "https://arya1.github.io/multi/uye/stunnel-5.62.zip"
+wget -q -O stunnel-5.62.zip "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/stunnel-5.62.zip"
 unzip -o stunnel-5.62.zip
 cd /root/stunnel
 chmod +x configure
@@ -375,7 +294,7 @@ END
 
 # Service Stunnel5 /etc/init.d/stunnel5
 echo -e "[ ${BLUE}NOTES${NC} ] Service Stunnel5 /etc/init.d/stunnel5 "
-wget -q -O /etc/init.d/stunnel5 "https://arya1.github.io/multi/uye/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/stunnel5.init"
 
 # Ubah Izin Akses
 echo -e "[ ${BLUE}NOTES${NC} ] Ubah Izin Akses "
@@ -403,8 +322,8 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-echo -e "[ ${GREEN}INFO${NC} ] Install OpenVPN"
-wget https://arya1.github.io/multi/uye/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+#echo -e "[ ${GREEN}INFO${NC} ] Install OpenVPN"
+#wget https://arya1.github.io/multi/uye/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 echo -e "[ ${GREEN}INFO${NC} ] install fail2ban"
@@ -416,11 +335,11 @@ mkdir -p /etc/geovpn/
 mkdir -p /etc/systemd/system/
 # // Installing ePro WebSocket Proxy
 echo -e "[ ${GREEN}INFO${NC} ] Installing ePro WebSocket Proxy"
-wget -q -O /usr/local/geovpn/ws-epro "https://arya1.github.io/multi/uye/ws-epro"
+wget -q -O /usr/local/geovpn/ws-epro "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/ws-epro"
 chmod +x /usr/local/geovpn/ws-epro
-wget -q -O /etc/geovpn/ws-epro.conf "https://arya1.github.io/multi/uye/ws-epro.conf"
+wget -q -O /etc/geovpn/ws-epro.conf "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/ws-epro.conf"
 chmod 644 /etc/geovpn/ws-epro.conf
-wget -q -O /etc/systemd/system/ws-epro.service "https://arya1.github.io/multi/uye/ws-epro.service"
+wget -q -O /etc/systemd/system/ws-epro.service "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/ws-epro.service"
 systemctl disable ws-epro
 systemctl stop ws-epro
 systemctl enable ws-epro
@@ -430,7 +349,7 @@ systemctl restart ws-epro
 clear
 # Install BBR
 echo -e "[ ${GREEN}INFO${NC} ] Install BBR "
-wget https://arya1.github.io/multi/uye/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Jatimpark/multi/main/uye/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 #gshshshs
 apt install figlet -y
