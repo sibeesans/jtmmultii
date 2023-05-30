@@ -52,13 +52,6 @@ wget https://raw.githubusercontent.com/Jatimpark/multi/main/uye/set-br.sh && chm
 echo -e "${green}Done!${NC}"
 sleep 2
 clear
-# // Setup OHP
-echo -e "${green}INSTALLING OHP${NC}"
-sleep 3
-wget https://raw.githubusercontent.com/Jatimpark/multi/main/uye/ohp.sh && chmod +x ohp.sh && screen -S ohp ./ohp.sh
-echo -e "${green}Done!${NC}"
-sleep 2
-clear
 #systemctl start nginx > /dev/null 2>&1
 
 
@@ -66,13 +59,13 @@ history -c
 rm -f /root/.bash
 rm -f /root/.bash_history
 rm -f /root/ssh-vpn.sh
-rm -f /root/sstp.sh
-rm -f /root/wg.sh
-rm -f /root/ss.sh
-rm -f /root/ssr.sh
-rm -f /root/xray.sh
-rm -f /root/ipsec.sh
-rm -f /root/set-br.sh
-rm -f /root/edu.sh
-rm -f /root/ohp.sh
+#rm -f /root/sstp.sh
+#rm -f /root/wg.sh
+#rm -f /root/ss.sh
+#rm -f /root/ssr.sh
+#rm -f /root/xray.sh
+#rm -f /root/ipsec.sh
+#rm -f /root/set-br.sh
+#rm -f /root/edu.sh
+#rm -f /root/ohp.sh
 echo ""

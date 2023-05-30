@@ -96,14 +96,92 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
 sleep 1
 #update
+echo -e "[ ${GREEN}INFO${NC} ] update..."
+apt update -y >/dev/null 2>&1
+apt install p7zip-full -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] upgrade..."
+apt upgrade -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install toilet..."
+apt install toilet -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install dist-upgrade..."
+apt dist-upgrade -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] remove --purge ufw firewalld..."
+apt-get remove --purge ufw firewalld -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] remove --purge exim4..."
+apt-get remove --purge exim4 -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install  curl..."
+apt -y install wget curl >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install ruby..."
+apt install ruby -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install python..."
+apt install python -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install make..."
+apt install make -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install cmake..."
+apt install cmake -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install coreutils..."
+apt install coreutils -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install rsyslog..."
+apt install rsyslog -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install net-tools..."
+apt install net-tools -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install zip..."
+apt install zip -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install unzip..."
+apt install unzip -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install nano..."
+apt install nano -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install sed..."
+apt install sed -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install gnupg..."
+apt install gnupg -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install gnupg1..."
+apt install gnupg1 -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install bc..."
+apt install bc -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install jq..."
+apt install jq -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install apt-transport-https..."
+apt install apt-transport-https -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install build-essential..."
+apt install build-essential -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install dirmngr..."
+apt install dirmngr -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libxml-parser-perl..."
+apt install libxml-parser-perl -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install neofetch..."
+apt install neofetch -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install git..."
+apt install git -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install lsof..."
+apt install lsof -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libsqlite3-dev..."
+apt install libsqlite3-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libz-dev..."
+apt install libz-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install gcc..."
+apt install gcc -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install g++..."
+apt install g++ -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libreadline-dev..."
+apt install libreadline-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install zlib1g-dev..."
+apt install zlib1g-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libssl-dev..."
+apt install libssl-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install libssl1.0-dev..."
+apt install libssl1.0-dev -y >/dev/null 2>&1
+echo -e "[ ${GREEN}INFO${NC} ] install dos2unix..."
+apt install dos2unix -y >/dev/null 2>&1
+echo ""
 clear
 # set time GMT +7
 echo -e "[ ${BLUE}NOTES${NC} ] set time GMT +7"
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 echo ""
 # set locale
-echo -e "[ ${BLUE}NOTES${NC} ] set locale"
-sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
+#echo -e "[ ${BLUE}NOTES${NC} ] set locale"
+#sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 
 cd
 
@@ -128,17 +206,17 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 sleep 1
 clear
 # setting port ssh
-echo -e "[ ${GREEN}INFO${NC} ] install sshd"
+#echo -e "[ ${GREEN}INFO${NC} ] install sshd"
 cd
-sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
-/etc/init.d/ssh restart
-/etc/init.d/ssh status
+#sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+#/etc/init.d/ssh restart
+/#etc/init.d/ssh status
 # install squid
-echo -e "[ ${GREEN}INFO${NC} ] install squid"
-cd
-apt -y install squid3 >/dev/null 2>&1
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
+#echo -e "[ ${GREEN}INFO${NC} ] install squid"
+#cd
+#apt -y install squid3 >/dev/null 2>&1
+#wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Jatimpark/multi/main/uye/squid3.conf"
+#sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
 echo -e "[ ${GREEN}INFO${NC} ] install sslh"
@@ -297,8 +375,8 @@ systemctl restart stunnel5
 #wget https://arya1.github.io/multi/uye/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
-echo -e "[ ${GREEN}INFO${NC} ] install fail2ban"
-apt -y install fail2ban >/dev/null 2>&1
+#echo -e "[ ${GREEN}INFO${NC} ] install fail2ban"
+#apt -y install fail2ban >/dev/null 2>&1
 
 clear
 mkdir -p /usr/local/geovpn/
@@ -319,8 +397,8 @@ systemctl restart ws-epro
 
 clear
 # Install BBR
-echo -e "[ ${GREEN}INFO${NC} ] Install BBR "
-wget https://raw.githubusercontent.com/Jatimpark/multi/main/uye/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#echo -e "[ ${GREEN}INFO${NC} ] Install BBR "
+#wget https://raw.githubusercontent.com/Jatimpark/multi/main/uye/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 #gshshshs
 apt install figlet -y
