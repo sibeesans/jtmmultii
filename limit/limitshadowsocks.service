@@ -1,6 +1,6 @@
 [Unit]
 Description=Limit Usage Xray Service
-Documentation=BlitarVpn
+Documentation=FighterTunnel
 After=syslog.target network-online.target
 
 [Service]
