@@ -15,8 +15,6 @@ clear
 clear
 clear
 # status
-rm -rf /root/status
-wget -q -O /root/status "https://raw.githubusercontent.com/copy47/kontol/main/apem"
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # // Exporting IP Address
 #export IP=$( curl -s https://ipinfo.io/ip/ )
@@ -78,8 +76,8 @@ echo -e ""
 echo -e ""
 echo -e "\E[44;1;39m ꧁࿇ SCRIPT SEDERHANA PENUH CINTA ࿇꧂ \E[0m"
 echo -e ""
-echo -e "${LIGHT} Info Acara Hari ini ${BLUE}•${ORANGE} $(cat /root/apem)${NC}"
-echo -e ""
+#echo -e "${LIGHT} Info Acara Hari ini ${BLUE}•${ORANGE} $(cat /root/apem)${NC}"
+#echo -e ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "                       INFORMASI VPS                          \E[0m"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -91,11 +89,11 @@ echo -e "Server IP           ${BLUE}•${NC} ${IPVPS}"
 echo -e "Total Amount Of Ram ${BLUE}•${NC} $tram MB"
 echo -e "Used Ram            ${BLUE}•${NC} $uram MB"
 echo -e "Free Ram            ${BLUE}•${NC} $fram MB"
-echo -e "Clients Name        ${BLUE}•${NC} AryaNet"
+echo -e "Clients Name        ${BLUE}•${NC} Adit Squad"
 echo -e "Exp Script VPS      ${BLUE}•${NC} LifeTime"
 echo -e "Time Reboot VPS     ${BLUE}•${NC} 05.00"
-echo -e "AutoScript          ${BLUE}•${NC} Arya Blitar"
-echo -e "handpone/wa         ${BLUE}•${NC} 087721815317"
+echo -e "AutoScript          ${BLUE}•${NC} By Vpn Adit Squad"
+echo -e "handpone/wa         ${BLUE}•${NC} +62 857-8068-9589"
 echo -e "Version             ${BLUE}•${KN} GRATIS"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "                       STATUS LAYANAN                        \E[0m"
@@ -124,7 +122,7 @@ echo -e " [${GREEN}09${NC}]${BLUE} •${NC} CLEAR LOG   $NC         [${GREEN}19$
 echo -e " [${GREEN}10${NC}]${BLUE} •${NC} TENDANG USER MULTI $NC  [${GREEN}20${NC}]${BLUE} • ${NC}INSTALL UDP$NC"
 echo -e " ${BLUE}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${GREEN} ༺ ${BLUE}𒆜${RED}▁ ${CYAN}▂ ${GREEN}▄ ${ORANGE}▅${PINK} ▆${GREEN} ▇ ${RED}█${BLUE}𒆜${CYAN} ༻${NC}  SCRIPT ARYA BLITAR ${BLUE}༺ ${RED}𒆜${GREEN}█ ${ORANGE}▇ ${CYAN}▆ ${RED}▅ ${GREEN}▄ ${ORANGE}▂ ${PINK}▁${BLUE}𒆜 ${CYAN}༻                   \E[0m"
+echo -e "${GREEN} ༺ ${BLUE}𒆜${RED}▁ ${CYAN}▂ ${GREEN}▄ ${ORANGE}▅${PINK} ▆${GREEN} ▇ ${RED}█${BLUE}𒆜${CYAN} ༻${NC}  SCRIPT ADIT SQUAD ${BLUE}༺ ${RED}𒆜${GREEN}█ ${ORANGE}▇ ${CYAN}▆ ${RED}▅ ${GREEN}▄ ${ORANGE}▂ ${PINK}▁${BLUE}𒆜 ${CYAN}༻                   \E[0m"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""
