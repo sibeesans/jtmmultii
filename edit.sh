@@ -206,7 +206,7 @@ function install_xray(){
     curl -s ipinfo.io/city >> /etc/xray/city
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >> /etc/xray/isp
     xray_latest="$(curl -s https://api.github.com/repos/dharak36/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
-    xraycore_link="https://github.com/dharak36/Xray-core/releases/download/v$xray_latest/xray.linux.64bit"
+    xraycore_link="https://github.com/sibeesans/core/releases/download/tes/xray.linux.64bit"
     curl -sL "$xraycore_link" -o xray
 #    unzip -q xray.zip && rm -rf xray.zip
     mv xray /usr/sbin/xray
@@ -404,32 +404,7 @@ function tambahan(){
     # chronyd -q 'server 0.id.pool.ntp.org iburst'
     chronyc sourcestats -v
     chronyc tracking -v
-
-    # > Tuned Device
-    tuned-adm profile network-latency
-    cat >/etc/msmtprc <<EOF
-defaults
-tls on
-tls_starttls on
-tls_trust_file /etc/ssl/certs/ca-certificates.crt
-account default
-host smtp.gmail.com
-port 587
-auth on
-user k6498236@gmail.com
-from k6498236@gmail.com
-password 81726354
-logfile ~/.msmtp.log
-EOF
-
-chgrp mail /etc/msmtprc
-chown 0600 /etc/msmtprc
-touch /var/log/msmtp.log
-chown syslog:adm /var/log/msmtp.log
-chmod 660 /var/log/msmtp.log
-ln -s /usr/bin/msmtp /usr/sbin/sendmail >/dev/null 2>&1
-ln -s /usr/bin/msmtp /usr/bin/sendmail >/dev/null 2>&1
-ln -s /usr/bin/msmtp /usr/lib/sendmail >/dev/null 2>&1
+    sleep 2
 print_ok "Selesai pemasangan modul tambahan"
 }
 
