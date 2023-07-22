@@ -20,7 +20,7 @@ echo -e " Tuk Infonya Silahkan Hubungi Admin"
 echo -e " Version SinglePort "
 echo -e "\033[0;36m By Arya Blitar 087721815317 "
 echo -e "\033[0;32m"
-kunci="AKUDEWE";
+kunci="y";
 read -s -p "Masukkan Password : " pass
 if [ $pass == $kunci ]
 then cat login.sh
@@ -52,8 +52,8 @@ TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 #KEY="6042674179:AAE_8Jd3b4KIhiLDy1zJ1YhVgFz1q_SQjZI"
 #URL="https://api.telegram.org/bot$KEY/sendMessage"
-REPO="https://raw.githubusercontent.com/Jatimpark/multi/main/"
-CDNF="https://raw.githubusercontent.com/Jatimpark/multi/main"
+REPO="https://raw.githubusercontent.com/sibeesans/jtmmultii/main/"
+CDNF="https://raw.githubusercontent.com/sibeesans/jtmmultii/main"
 APT="apt-get -y install "
 domain=$(cat /root/domain)
 start=$(date +%s)
@@ -190,7 +190,7 @@ function pasang_ssl() {
     mkdir /root/.acme.sh
     systemctl stop $STOPWEBSERVER
     systemctl stop nginx
-    curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
+    curl https://raw.githubusercontent.com/sibeesans/indonesia/main/acme.sh -o /root/.acme.sh/acme.sh
     chmod +x /root/.acme.sh/acme.sh
     /root/.acme.sh/acme.sh --upgrade --auto-upgrade
     /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
@@ -401,11 +401,7 @@ function tambahan(){
     sed -i '$ i\/swapfile      swap swap   defaults    0 0' /etc/fstab
 
     # > Singkronisasi jam
-    # chronyd -q 'server 0.id.pool.ntp.org iburst'
-    chronyc sourcestats -v
-    chronyc tracking -v
-    sleep 2
-print_ok "Selesai pemasangan modul tambahan"
+    print_ok "Selesai pemasangan modul tambahan"
 }
 
 
